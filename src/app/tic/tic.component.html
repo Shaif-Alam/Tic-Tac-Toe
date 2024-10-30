@@ -1,0 +1,90 @@
+<div class="container py-2" style="background-color: #FDECEF">
+
+<div class="text-start px-5 py-2 font_head">
+Tic Tac Toe
+</div>
+ 
+  <span class="rounded-circle border p-4 rounded_going ">
+    {{ roundCount }}<span *ngIf="roundCount % 10 === 1 && roundCount % 100 !== 11">st</span>
+    <span *ngIf="roundCount % 10 === 2 && roundCount % 100 !== 12">nd</span>
+    <span *ngIf="roundCount % 10 === 3 && roundCount % 100 !== 13">rd</span>
+    <span *ngIf="![1, 2, 3].includes(roundCount % 10) || [11, 12, 13].includes(roundCount % 100)">th</span>
+  
+  </span>
+  round
+  <!-- <div class="">
+  
+    <div *ngIf="winner" class="animate__animated animate__zoomIn alert alert-success" role="alert">
+     <h1></h1> Player {{ winner }} wins this round!
+    </div>
+    <div *ngIf="!winner && !roundOver" class="animate__animated animate__zoomIn alert alert-warning" role="alert">
+      {{ currentPlayer }}
+    </div>
+    <div *ngIf="roundOver && !winner" class=" animate__animated animate__zoomIn alert alert-warning" role="alert">
+      It's a tie!
+    </div>
+  
+ </div> -->
+  <div class="d-flex flex-wrap justify-content-evenly align-items-center mt-5">
+  
+      <div class="user_one py-3">
+        <button type="button" class="btn btn-primary"> Wins Rounded: {{playerXWins }}</button>
+        <button class=" x_user">
+          X
+        </button>
+      </div>
+    
+
+    <div class="parent_box">
+      <div class="board">
+        <div *ngFor="let cell of board; let i = index" class="cell"
+          [ngClass]="{'x-cell': cell === 'X', 'o-cell': cell === 'O'}" (click)="makeMove(i)">
+          {{ cell }}
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <div class="user_one py-3">
+        <button type="button" class="btn btn-primary"> Wins Rounded: {{playerOWins }}</button>
+        <button class=" x_user_one_one">
+          O
+        </button>
+      </div>
+    
+    </div>
+
+  </div>
+
+
+  <!-- "Your Turn" Indicator -->
+  <div class="turn-indicator">
+    <p [ngClass]="{'active-turn': currentPlayer === 'X'}">
+      Player X - {{ currentPlayer === 'X' ? 'Your Turn' : '' }}
+    </p>
+    <p [ngClass]="{'active-turn': currentPlayer === 'O'}">
+      Player O - {{ currentPlayer === 'O' ? 'Your Turn' : '' }}
+    </p>
+  </div>
+  
+  <!-- "Replay Round" button for a tie -->
+  <button *ngIf="roundOver && !winner" (click)="replayRound()" class="replay-button">
+    Replay Round
+  </button>
+  
+  <!-- "Next Round" button when there’s a winner -->
+  <button *ngIf="roundOver && winner" (click)="resetRound()" [ngClass]="{'x-button': winner === 'X', 'o-button': winner === 'O'}">
+    Next Round
+  </button>
+  
+  
+  
+</div>
+
+<ng-template #wins>
+  <div mat-dialog-title class="text-center" style="background-color: chartreuse;">Player {{ winner }} Wins!</div>
+  <div class="text-center py-2">
+    <p>💐💐Congratulations!💐💐</p>
+
+</div>
+</ng-template>

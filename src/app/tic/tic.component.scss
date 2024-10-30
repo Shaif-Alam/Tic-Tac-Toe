@@ -1,0 +1,204 @@
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    // margin: 20px auto;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid  #F34954;
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .x-cell {
+  
+   
+      background-color: #F34954; 
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: bold;
+      font-family: 'Helvetica Rounded', sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+      border-radius: 10px; 
+      border: 1px solid  #F34954;
+  
+  }
+  
+  .o-cell {
+    background-color:#F9D459 ; /* Sky Blue for O */
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Helvetica Rounded', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px; 
+    border: 1px solid #F9D459;
+  }
+  
+  .status, .scores {
+    margin-top: 15px;
+  }
+  
+  .turn-indicator {
+    margin-top: 10px;
+  }
+  
+  .turn-indicator p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .active-turn {
+    font-weight: bold;
+    color: #FF4500; /* Orange color for active turn */
+  }
+  
+  /* Button styles based on the current player */
+  button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .x-button {
+    background-color: #F34954; /* Gold for Player X */
+    color: white;
+    border-radius: 20px;
+  }
+  
+  .o-button {
+    background-color: #F9D459; /* Sky Blue for Player O */
+    color: black;
+    border-radius: 20px;
+  }
+  
+
+  .user_one{
+    //  height: 175px;
+     border-radius: 30px;
+     border: 2px solid red;
+     width:200px ;
+     
+  }
+
+  .rounded_win {
+    border: 2px solid rgb(255, 244, 124);
+    border-radius: 40px;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Adjust height as needed */
+}
+
+
+.parent_box {
+  border: 4px dashed #F4636D; /* Dashed border with custom color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px; /* Optional padding inside the box */
+}
+
+
+.rounded_going{
+   font-weight: bolder;
+   background-color: #FFC400;
+   font-size: 36px;
+   font-family: 'Helvetica Rounded', sans-serif;
+}
+
+h1{
+   color: #F34954;
+   font-weight: bold;
+}
+
+.x_user{
+font-size: 28px;
+font-weight: bold;
+  border: 2px solid red;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #F34954;
+  color: white;
+  font-family: 'Helvetica Rounded', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.x_user_one{
+  font-size: 16px;
+    border: 2px solid red;
+    width: 120px;
+    border-radius: 20px;
+    background-color: #F34954;
+    color: white;
+    font-family: 'Helvetica Rounded', sans-serif;
+
+}
+.btn-primary{
+   background-color: violet !important;
+    color:  white;
+    font-weight: bold;
+    border-radius: 20px !important;
+
+    font-family: Helvetica, sans-serif;
+}
+// tic.component.scss
+
+.custom-dialog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center horizontally
+  justify-content: center; // Center vertically
+  text-align: center; // Center text within elements
+}
+
+.mat-dialog-title {
+  margin-bottom: 16px; // Adjust spacing if necessary
+}
+
+.mat-dialog-content {
+  margin-bottom: 16px; // Adjust spacing if necessary
+}
+
+.x-button, .o-button {
+  margin-top: 16px; // Add some spacing above the button
+}
+
+
+.x_user_one_one{
+
+  font-size: 28px;
+font-weight: bold;
+  border: 2px solid #FFC400;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #FFC400;
+  color: white;
+  font-family: 'Helvetica Rounded', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.font_head{
+   font-family: Helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 36px;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
