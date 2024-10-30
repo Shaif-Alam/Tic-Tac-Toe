@@ -1,4 +1,4 @@
-# Game
+# Game: Tic-Tac-Toe Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Features
+Real-Time Gameplay: Play with a friend with instant feedback on each move.
+Winner Announcement: A pop-up modal displays the winning player and closes automatically after 3 seconds.
+Responsive Design: Built with Angular Material to adapt seamlessly to different screen sizes.
+Customizable Styles: Easily update the look with custom CSS and Angular Material's flexible styling options.
+
+
+# Technologies Used
+Angular CLI for project setup and management.
+Angular Material for UI components and layout.
+TypeScript for building structured, maintainable code.
+Game
